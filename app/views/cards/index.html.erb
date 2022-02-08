@@ -11,12 +11,12 @@
         end
     end
     
-    card = deck.sample(5)
+    #card = deck.sample(5)
+    shuffled_deck = deck.shuffle
+    hand = shuffled_deck[0,5]
 %>
 <h1>Your hand of 5 cards</h1>
 
-<img src="/images/cards/<%=card[0]%>.svg">
-<img src="/images/cards/<%=card[1]%>.svg">
-<img src="/images/cards/<%=card[2]%>.svg">
-<img src="/images/cards/<%=card[3]%>.svg">
-<img src="/images/cards/<%=card[4]%>.svg">
+<% for card in hand %>
+<img src="/images/cards/<%=card%>.svg">
+<% end %>
