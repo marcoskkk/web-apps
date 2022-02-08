@@ -1,0 +1,15 @@
+<%
+    contacts = Contact.all
+    companies = Company.all
+%>
+
+<h1>Contacts</h1>
+
+<ul>
+    <%for company in companies%>
+    <h2>"=#{company.name}"</h2>
+    <%for contact in contacts.company%>
+    <li><%="#{contact.first_name} #{contact.last_name}"%></li>
+    <%end%>
+    <%end%>
+</ul>
