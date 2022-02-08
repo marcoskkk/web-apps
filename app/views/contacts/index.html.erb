@@ -7,9 +7,9 @@
 
 <ul>
     <%for company in companies%>
-    <h2>"=#{company.name}"</h2>
-    <%for contact in contacts.company%>
-    <li><%="#{contact.first_name} #{contact.last_name}"%></li>
-    <%end%>
+    <h2><%="#{company.name}"%></h2>
+        <%for contact in company.contacts%>
+            <li><%="#{contact.first_name} #{contact.last_name}"%></li>
+        <%end%>
     <%end%>
 </ul>
